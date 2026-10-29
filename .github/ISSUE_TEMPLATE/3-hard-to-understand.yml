@@ -1,0 +1,27 @@
+name: This is hard to understand
+description: A sentence, word, or explanation that lost you.
+labels: ["plain language"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Everything here should make sense without a tech background. If it did not, that is on the lab, not on you.
+  - type: input
+    id: where
+    attributes:
+      label: Where is it?
+      description: A link or file name.
+    validations:
+      required: true
+  - type: textarea
+    id: quote
+    attributes:
+      label: Which part?
+      description: Paste the sentence or describe the section.
+    validations:
+      required: true
+  - type: textarea
+    id: confusing
+    attributes:
+      label: What was confusing?
+      description: Optional. Even "I got lost here" helps.
