@@ -1,0 +1,30 @@
+name: Something is wrong
+description: A bug in the code, a wrong number in a write-up, or a broken link.
+labels: ["problem"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong?
+      description: Describe what you saw.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect instead?
+    validations:
+      required: true
+  - type: textarea
+    id: where
+    attributes:
+      label: Where is it?
+      description: A file, a link, or the steps to see it.
+    validations:
+      required: true
+  - type: textarea
+    id: setup
+    attributes:
+      label: Your setup (for code problems)
+      description: Operating system, Python version, GPU if any.
+      render: text
