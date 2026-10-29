@@ -1,0 +1,40 @@
+name: Reproduction report
+description: You ran a study yourself. Tell us what you got, whether it matched or not.
+labels: ["reproduction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for checking the work. Results that do not match are just as useful as results that do.
+  - type: input
+    id: study
+    attributes:
+      label: Which study?
+      placeholder: HARK 01
+    validations:
+      required: true
+  - type: dropdown
+    id: matched
+    attributes:
+      label: Did your results match the published ones?
+      options:
+        - "Yes"
+        - Partly
+        - "No"
+    validations:
+      required: true
+  - type: textarea
+    id: results
+    attributes:
+      label: What did you get?
+      description: Numbers, tables, or plots. Paste or attach them.
+    validations:
+      required: true
+  - type: textarea
+    id: how
+    attributes:
+      label: How did you run it?
+      description: Commit hash, commands, seeds, and hardware.
+      render: text
+    validations:
+      required: true
